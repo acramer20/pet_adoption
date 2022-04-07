@@ -1,0 +1,20 @@
+{%extends 'home.html'%}
+{%block title%}Pet Info{%endblock%}
+{%block content%}
+
+<div class="col-3 justify-content-center">
+
+    <h1 class="display-lg">More info on {{pet.name}}</h1>
+    <div>
+        {%if pet.photo_url%}
+        <img src="{{pet.photo_url}}">
+        {%endif%}
+        <p>Species: {{pet.species}}</p>
+        {%if pet.age%}
+        <p>Age: {{pet.age}}</p>
+        {%endif%}
+        <a class="btn btn-primary" href="/pets/{{pet.id}}/edit">Edit</a>
+    </div>
+</div>
+
+{%endblock%}
